@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A249DAFF-AC6E-4E74-8091-9F9EBD9CCFA5}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenReport</RootNamespace>
-    <AssemblyName>OpenReport</AssemblyName>
+    <ProjectGuid>{A1B62BC4-E546-4732-A98A-65C30CF52D4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OpenReport.Test</RootNamespace>
+    <AssemblyName>OpenReport.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,58 +35,46 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\ICustonAttribute.cs" />
-    <Compile Include="Attributes\Table\TableColumnHeaderAttribute.cs" />
-    <Compile Include="Attributes\Table\TableColumnSizeAttribute.cs" />
-    <Compile Include="Attributes\Table\TableColumnTotalizeAttribute.cs" />
-    <Compile Include="Attributes\Table\TableStyleAttribute.cs" />
-    <Compile Include="Attributes\Text\TextAlignAttribute.cs" />
-    <Compile Include="Layouts\Elements\DocumentElement.cs" />
-    <Compile Include="Layouts\Elements\HeaderElement.cs" />
-    <Compile Include="Layouts\Elements\IElement.cs" />
-    <Compile Include="Layouts\Elements\TableElement.cs" />
-    <Compile Include="ORDocumentViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ORDocumentViewer.Designer.cs">
-      <DependentUpon>ORDocumentViewer.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Styles\ColumnFormat.cs" />
-    <Compile Include="Styles\TableStyle.cs" />
-    <Compile Include="Styles\TextAlign.cs" />
-    <Compile Include="Tools\PrinterTool.cs" />
-    <Compile Include="Tools\PrinterToolOptions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pure-min.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ORDocumentViewer.resx">
-      <DependentUpon>ORDocumentViewer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\OpenReportIcon.ico" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenReport\OpenReport.csproj">
+      <Project>{a249daff-ac6e-4e74-8091-9f9ebd9ccfa5}</Project>
+      <Name>OpenReport</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

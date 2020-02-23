@@ -2,6 +2,7 @@
 {
     public class DocumentElement : IElement
     {
+        public string HeaderText { get; set; }
         public string Content { get; set; }
 
         public string Render()
