@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OpenReport.Layouts.Elements
+﻿namespace OpenReport.Layouts.Elements
 {
     public class HeaderElement : IElement
     {
