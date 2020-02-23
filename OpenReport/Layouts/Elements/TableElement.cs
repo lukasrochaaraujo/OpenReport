@@ -34,8 +34,6 @@ namespace OpenReport.Layouts.Elements
             PrepareFooter();
 
             return $@"
-            <style media='print'>{Properties.Resources.PureCssContent}></style>
-            <style media='screen'>{Properties.Resources.PureCssContent}></style>
             <table class='{TableStyleClass}' width='100%'>
                 <thead>
                     <tr>{TableHeader.ToString()}</tr>
@@ -56,7 +54,7 @@ namespace OpenReport.Layouts.Elements
             foreach (PropertyInfo prop in props)
             {
                 string headerName = prop.Name;
-                List<string> elementAttributes = new List<string>();
+                var elementAttributes = new List<string>();
                 var attrs = prop.GetCustomAttributes();
 
                 foreach (var attr in attrs)
@@ -102,7 +100,7 @@ namespace OpenReport.Layouts.Elements
             PropertyInfo[] props = InstanceOfT.GetType().GetProperties();
             foreach (PropertyInfo prop in props)
             {
-                List<string> elementAttributes = new List<string>();
+                var elementAttributes = new List<string>();
                 string content = "";
 
                 var attributes = prop.GetCustomAttributes();
@@ -114,7 +112,7 @@ namespace OpenReport.Layouts.Elements
                     if (attribute is TableColumnTotalizeAttribute)
                     {
                         decimal sum = CollectionData.Sum(c => decimal.Parse(prop.GetValue(c).ToString()));
-                        content = ((TableColumnTotalizeAttribute)attribute).FormatValue(sum);
+                        content = "<b>" + ((TableColumnTotalizeAttribute)attribute).FormatValue(sum) + "</b>";
                     }
                 }
 
