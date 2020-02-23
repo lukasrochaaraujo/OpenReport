@@ -71,7 +71,7 @@ namespace OpenReport.Properties {
         ///normalize.css v^3.0 | MIT License | git.io/normalize
         ///Copyright (c) Nicolas Gallagher and Jonathan Neal
         ///*/
-        ////*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display: [rest of string was truncated]&quot;;.
+        ////*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summar [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PureCssContent {
             get {
