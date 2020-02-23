@@ -23,4 +23,4 @@ public class Produto
 }
 ```
 
-![exemple](/GitHub/OpenReportExample.png)
+![exemple](/GitHub/OpenReportExample.png?raw=true)
