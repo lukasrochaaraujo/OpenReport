@@ -86,5 +86,8 @@
   <ItemGroup>
     <None Include="Resources\OpenReportIcon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="GitHub\OpenReportExample.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
