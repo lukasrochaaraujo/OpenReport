@@ -367,7 +367,7 @@ namespace OpenReport.Test
         public decimal VR_Unitario { get; set; }
 
         [TableColumnHeader("Vlr. Venda")]
-        [TableColumnTotalize(ColumnFormat.Decimal)]
+        [TableColumnTotalize(ColumnFormatStyle.Decimal)]
         public decimal VR_Venda { get; set; }
     }
 }

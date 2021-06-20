@@ -7,9 +7,9 @@ namespace OpenReport.Attributes.Text
     [AttributeUsage(AttributeTargets.Property)]
     public class TextAlignAttribute : Attribute, ICustonAttribute
     {
-        public TextAlign TextAlign { get; set; }
+        public TextAlignStyle TextAlign { get; set; }
 
-        public TextAlignAttribute(TextAlign textAlign)
+        public TextAlignAttribute(TextAlignStyle textAlign)
         {
             TextAlign = textAlign;
         }

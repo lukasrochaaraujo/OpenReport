@@ -7,9 +7,9 @@ namespace OpenReport.Attributes.Table
     [AttributeUsage(AttributeTargets.Property)]
     public class TableColumnTotalizeAttribute : Attribute
     {
-        private ColumnFormat Format;
+        private ColumnFormatStyle Format;
 
-        public TableColumnTotalizeAttribute(ColumnFormat format)
+        public TableColumnTotalizeAttribute(ColumnFormatStyle format)
         {
             Format = format;
         }
@@ -18,9 +18,9 @@ namespace OpenReport.Attributes.Table
         {
             switch (Format)
             {
-                case ColumnFormat.Decimal:
+                case ColumnFormatStyle.Decimal:
                     return value.ToString("N2");
-                case ColumnFormat.Integer:
+                case ColumnFormatStyle.Integer:
                 default:
                     return ((int)value).ToString();
             }

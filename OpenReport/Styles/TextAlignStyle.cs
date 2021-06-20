@@ -1,6 +1,6 @@
 ﻿namespace OpenReport.Styles
 {
-    public enum TextAlign
+    public enum TextAlignStyle
     {
         Left,
         Center,

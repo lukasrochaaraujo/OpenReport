@@ -65,9 +65,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Styles\ColumnFormat.cs" />
+    <Compile Include="Styles\ColumnFormatStyle.cs" />
     <Compile Include="Styles\TableStyle.cs" />
-    <Compile Include="Styles\TextAlign.cs" />
+    <Compile Include="Styles\TextAlignStyle.cs" />
     <Compile Include="Tools\PrinterTool.cs" />
     <Compile Include="Tools\PrinterToolOptions.cs" />
   </ItemGroup>
