@@ -1,9 +1,21 @@
-﻿namespace OpenReport.Layouts.Elements
+﻿using System.Text;
+
+namespace OpenReport.Layouts.Elements
 {
     public class DocumentElement : IElement
     {
-        public string HeaderText { get; set; }
-        public string Content { get; set; }
+        public string HeaderContent { get; private set; }
+        public StringBuilder ContentBuilder { get; private set; }
+
+        public DocumentElement(HeaderElement header)
+        {
+            ContentBuilder = new StringBuilder();
+            HeaderContent = header.HeaderContent;
+            AppendContent(header.Render());
+        }
+
+        public void AppendContent(string content)
+            => ContentBuilder.Append(content);
 
         public string Render()
         {
@@ -16,7 +28,7 @@
                 <style media='screen'>{Properties.Resources.PureCssContent}></style>
             </head>
             <body style='padding: 2.5%'>
-                {Content}
+                {ContentBuilder}
             </body>
             </html>
             ";

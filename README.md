@@ -1,5 +1,6 @@
 # Open Report
 A simple library to display minimal reports for WinForms applications
+using .NET Framework 4.7.x
 
 **Example**
 

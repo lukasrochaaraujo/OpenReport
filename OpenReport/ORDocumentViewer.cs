@@ -18,7 +18,7 @@ namespace OpenReport
 
         private void ORDocumentViewer_Shown(object sender, EventArgs e)
         {
-            Text = $"ORViewer - {Document.HeaderText}";
+            Text = $"ORViewer - {Document.HeaderContent}";
             wb_viewer.DocumentText = Document.Render();
         }
     }

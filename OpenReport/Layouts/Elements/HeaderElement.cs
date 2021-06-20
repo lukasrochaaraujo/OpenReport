@@ -4,7 +4,7 @@
     {
         public string HeaderTop { get; set; }
 
-        public string Header { get; set; }
+        public string HeaderContent { get; set; }
 
         public string HeaderBottom { get; set; }
 
@@ -13,7 +13,7 @@
             return $@"
             <header'>
                 <p style='font-size: 10pt'>{(string.IsNullOrWhiteSpace(HeaderTop) ? "" : HeaderTop)}</p>
-                <p style='font-weight: 600'>{(string.IsNullOrWhiteSpace(Header) ? "" : Header)}</p>
+                <p style='font-weight: 600'>{(string.IsNullOrWhiteSpace(HeaderContent) ? "" : HeaderContent)}</p>
                 <span>{(string.IsNullOrWhiteSpace(HeaderBottom) ? "" : HeaderBottom)}</span>
             </header>
             ";
