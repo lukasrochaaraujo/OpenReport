@@ -1,25 +1,19 @@
-# Early warning
-*Under development. Not ready for use.*
-
-*Em desenvolvimento. Não está pronto para uso.*
-
-
 # Open Report
-Biblioteca em .NET Framework para exibição de relatórios utilizando HTML.
+A simple library to display minimal reports for WinForms applications
 
-**Exemplo**
+**Example**
 
 ```csharp
 [TableStyle(TableStyle.Striped)]
 public class Produto
 {
-    [TableColumnHeader("Descrição")]
+    [TableColumnHeader("Description")]
     [TableColumnSize(50)]
-    public string CH_DescricaoComercial { get; set; }
+    public string Description { get; set; }
 
-    [TableColumnHeader("Qtd. Estoque")]
-    [TableColumnTotalize(ColumnFormat.Integer)]
-    public int IN_Estoque { get; set; }
+    [TableColumnHeader("Stock")]
+    [TableColumnTotalize(ColumnFormatStyle.Integer)]
+    public int StockAmmount { get; set; }
 }
 ```
 
